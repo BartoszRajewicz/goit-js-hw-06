@@ -1,9 +1,9 @@
 const validationInput = document.getElementById("validation-input");
-
+const dataLength = validationInput.getAttribute("data-length");
 validationInput.addEventListener("blur", () => {
   const inputValue = validationInput.value;
 
-  if (inputValue.length >= 5) {
+  if (inputValue.length >= dataLength) {
     validationInput.classList.remove("invalid");
     validationInput.classList.add("valid");
   } else {
